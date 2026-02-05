@@ -12,8 +12,11 @@ HTML/
 ├── ques2.html              # Star patterns and image maps
 ├── Ques3.html              # Complex table with course data
 ├── Ques4.html              # Image hyperlinks table
+├── ques5.html              # HTML5 tags demonstration
+├── ques7.html              # Hotel customer profile form
+├── Ques9.html              # Nested lists demonstration
 ├── README.md               # Project documentation
-└── assets/                 # Image assets
+└── docs/                   # Image assets
     ├── airtel.jpg
     ├── MAP.jpg
     ├── MRF.avif
@@ -39,6 +42,10 @@ This project covers essential HTML concepts:
 - **Hyperlinks**: Text and image links with target attributes
 - **Image Maps**: Interactive clickable regions on images
 - **Special Characters**: HTML entities and symbols
+- **HTML5 Semantic Tags**: Header, footer, nav, article, video, audio
+- **HTML5 Interactive Elements**: Datalist, output, embed, bdi
+- **Forms**: Input fields, radio buttons, dropdowns, validation
+- **Lists**: Nested ordered and unordered lists
 
 ## 📄 File Descriptions
 
@@ -83,6 +90,40 @@ This project covers essential HTML concepts:
   - Image hyperlinks to external sites
   - Uniform image sizing (200x200px)
   - Table-based layout structure
+  - Fixed image paths to docs folder
+
+### ques5.html
+- **Purpose**: HTML5 tags demonstration
+- **Features**:
+  - Video tag with multiple format support
+  - Audio tag with cross-browser compatibility
+  - Semantic tags (header, footer, nav, article)
+  - Embed tag for external content
+  - Datalist for autocomplete input
+  - Output tag for dynamic calculations
+  - Bdi tag for bidirectional text
+  - Modern gradient styling and responsive design
+  - Interactive project calculator
+
+### ques7.html
+- **Purpose**: Hotel customer profile data entry form
+- **Features**:
+  - Customer information form (name, address, age)
+  - Gender selection with radio buttons
+  - Room type dropdown (A/C, Non-A/C, Deluxe)
+  - Payment method selection (Cash, Card, Coupons)
+  - Check-in/Check-out date pickers
+  - Form validation and required fields
+  - Professional hotel branding design
+  - JavaScript form submission handling
+
+### Ques9.html
+- **Purpose**: Nested lists demonstration
+- **Features**:
+  - Multi-level ordered and unordered lists
+  - Programming languages hierarchy
+  - Web development technologies structure
+  - Proper list nesting and formatting
 
 ## 🚀 Getting Started
 
