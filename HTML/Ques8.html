@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Tags Demo - Digital Media Studio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        header { background: rgba(0,0,0,0.8); color: white; padding: 20px; text-align: center; }
+        nav { background: rgba(255,255,255,0.1); padding: 10px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; padding: 8px 16px; border-radius: 20px; background: rgba(255,255,255,0.2); }
+        main { padding: 20px; max-width: 1200px; margin: 0 auto; }
+        article { background: white; margin: 20px 0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        footer { background: rgba(0,0,0,0.8); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .demo-section { margin: 20px 0; padding: 15px; border-left: 4px solid #667eea; }
+        .calculator { background: #f0f0f0; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .bdi-demo { background: #e8f4fd; padding: 10px; border-radius: 5px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <!-- I. Header Tag -->
+    <header>
+        <h1>🎬 Digital Media Studio</h1>
+        <p>Exploring HTML5 Semantic Tags & Multimedia</p>
+    </header>
+
+    <!-- V. Nav Tag -->
+    <nav>
+        <a href="#video">Video</a>
+        <a href="#audio">Audio</a>
+        <a href="#interactive">Interactive</a>
+        <a href="#content">Content</a>
+    </nav>
+
+    <main>
+        <!-- IX. Article Tag -->
+        <article id="video">
+            <h2>🎥 Video Showcase</h2>
+            <div class="demo-section">
+                <!-- I. Video Tag -->
+                <video width="400" height="300" controls poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2NjIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNsaWNrIHRvIFBsYXk8L3RleHQ+PC9zdmc+">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <p><strong>Video Tag Demo:</strong> HTML5 video with multiple formats and custom poster</p>
+            </div>
+        </article>
+
+        <article id="audio">
+            <h2>🎵 Audio Experience</h2>
+            <div class="demo-section">
+                <!-- II. Audio Tag -->
+                <audio controls preload="metadata">
+                    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p><strong>Audio Tag Demo:</strong> Cross-browser audio with fallback support</p>
+            </div>
+
+            <!-- VI. Embed Tag -->
+            <div class="demo-section">
+                <h3>📺 Embedded Content</h3>
+                <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="400" height="300" type="text/html">
+                <p><strong>Embed Tag Demo:</strong> External multimedia content integration</p>
+            </div>
+        </article>
+
+        <article id="interactive">
+            <h2>⚡ Interactive Elements</h2>
+            
+            <!-- VII. Datalist Tag -->
+            <div class="demo-section">
+                <h3>🎨 Creative Tools</h3>
+                <label for="tools">Choose your creative tool:</label>
+                <input list="creative-tools" id="tools" name="tools" placeholder="Type or select...">
+                <datalist id="creative-tools">
+                    <option value="Photoshop">
+                    <option value="Illustrator">
+                    <option value="After Effects">
+                    <option value="Premiere Pro">
+                    <option value="Blender">
+                    <option value="Cinema 4D">
+                </datalist>
+                <p><strong>Datalist Tag Demo:</strong> Autocomplete suggestions for user input</p>
+            </div>
+
+            <!-- X. Output Tag -->
+            <div class="demo-section">
+                <h3>🧮 Project Calculator</h3>
+                <div class="calculator">
+                    <label for="hours">Project Hours:</label>
+                    <input type="number" id="hours" value="10" oninput="calculate()">
+                    <label for="rate">Hourly Rate ($):</label>
+                    <input type="number" id="rate" value="50" oninput="calculate()">
+                    <br><br>
+                    <strong>Total Cost: $<output id="result" for="hours rate">500</output></strong>
+                </div>
+                <p><strong>Output Tag Demo:</strong> Dynamic calculation results display</p>
+            </div>
+        </article>
+
+        <article id="content">
+            <h2>🌍 Global Content</h2>
+            
+            <!-- VIII. Bdi Tag -->
+            <div class="demo-section">
+                <h3>📝 Multilingual Reviews</h3>
+                <div class="bdi-demo">
+                    <p>User <bdi>إيان</bdi> rated this: ⭐⭐⭐⭐⭐</p>
+                    <p>User <bdi>משה</bdi> commented: "Excellent work!"</p>
+                    <p>User <bdi>Ahmed</bdi> says: "Very professional"</p>
+                </div>
+                <p><strong>Bdi Tag Demo:</strong> Bidirectional text isolation for mixed-direction content</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- IV. Footer Tag -->
+    <footer>
+        <p>&copy; 2024 Digital Media Studio | HTML5 Tags Demonstration</p>
+        <p>🚀 Showcasing: Video, Audio, Header, Footer, Nav, Embed, Datalist, Bdi, Article, Output</p>
+    </footer>
+
+    <script>
+        function calculate() {
+            const hours = document.getElementById('hours').value;
+            const rate = document.getElementById('rate').value;
+            const result = hours * rate;
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>
