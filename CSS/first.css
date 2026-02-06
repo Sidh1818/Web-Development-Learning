@@ -1,0 +1,37 @@
+.box{
+    width: 200px;
+    height: 50px;
+    background-color: aqua;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+a:link{color:aqua;font-size:25px;border:2px solid black;padding:5px;border-radius: 10px;}
+a:visited{color:mediumaquamarine}
+a:hover{color:blue}
+a.active{color:yellow}
+
+
+h1{
+    box-shadow: 5px 5px 5px green;
+    text-shadow: 5px 5px 5px blue;
+}
+
+
+p{
+    column-count:3;
+    column-gap:20px;
+    column-rule:4px solid black;
+    column-width:30px;
+    text-align:justify;
+    font-size:20px;
+    font-style:italic;
+}
+
+body{
+    background-image:url("RCB.avif");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
