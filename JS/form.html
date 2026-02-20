@@ -1,0 +1,81 @@
+<!--Form Validation using required and pattern attributes of html tags-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feet ↔ Inches Converter</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align:center;
+            margin-top:50px;
+        }
+        .box{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+        input{
+            padding:8px;
+            font-size:16px;
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 align="center"> Student Registration Form </h2>
+
+
+<form onsubmit="return validationForm()" name="myform" encType="multipart/form-data">
+<table align="center">
+
+    <tr>
+        <td> Student ID </td>
+        <td>
+            <input type = "text" id="studid" required pattern="[0-9]{8}"
+            title="Student ID must be 8 digits and it should contain only numbers"></input>
+        </td>
+    </tr>
+
+    <tr>
+        <td> Full Name </td>
+        <td>
+            <input type = "text" id="name" required 
+            pattern = "[A-Za-z ]{3,}"
+            title="Name must contain only letters(minimum 3 characters) ">
+        </td>
+    </tr>
+
+    <tr>
+        <td> Email: </td>
+        <td>
+            <input type = "email" id="email" required
+            pattern = "[a-zA-Z0-9_.-]+[@][a-zA-Z]+[.][A-Za-z]+">
+        </td>
+    </tr>
+
+    <tr>
+        <td> Mobile </td>
+        <td>
+            <input type = "text" id="mobile" required
+            pattern = "[0-9]{10}"
+            title = "Mobile must be 10 digits">
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+        <input type = "submit" value = "Submit">
+        </td>
+    </tr>
+
+    
+</table>
+</form>
+
+<script src="display.js"></script>
+
+</body>
+</html>

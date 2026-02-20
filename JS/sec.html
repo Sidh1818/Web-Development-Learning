@@ -1,0 +1,39 @@
+<!--write a js program to covert ht from feet to inches and vice versa. Take input boxes parallel to each other.
+when you enter the value in the first text box in feet the corresponding value 
+in inches will be displayed in another text box and vice versa.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feet ↔ Inches Converter</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align:center;
+            margin-top:50px;
+        }
+        .box{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+        input{
+            padding:8px;
+            font-size:16px;
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Feet to Inches Converter</h2>
+
+<div class="box">
+    <input type="number" id="i1" placeholder="Feet" oninput="f2i()">
+    <input type="number" id="i2" placeholder="Inches" oninput="i2f()">
+</div>
+
+<script src="display.js"></script>
+
+</body>
+</html>
