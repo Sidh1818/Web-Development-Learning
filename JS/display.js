@@ -15,3 +15,5 @@ const i2f = () => {
     let i = document.getElementById("i2").value;
     document.getElementById("i1").value = i ? (i / 12).toFixed(2) : "";
 }
+
+
