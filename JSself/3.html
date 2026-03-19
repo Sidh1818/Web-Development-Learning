@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Credit Card Validation</title>
+
+<script>
+function validateCard() {
+
+    var card = document.getElementById("card").value;
+
+    if ((card.startsWith("51") || card.startsWith("52") || 
+         card.startsWith("53") || card.startsWith("54") || 
+         card.startsWith("55")) && card.length == 16) {
+        alert("Valid MasterCard");
+    }
+
+    else if (card.startsWith("4") && (card.length == 13 || card.length == 16)) {
+        alert("Valid Visa Card");
+    }
+
+    else if ((card.startsWith("34") || card.startsWith("37")) && card.length == 15) {
+        alert("Valid American Express");
+    }
+
+    else {
+        alert("Invalid Credit Card");
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Credit Card Validator</h2>
+
+Enter Card Number:
+<input type="text" id="card">
+
+<br><br>
+
+<button onclick="validateCard()">Validate</button>
+
+</body>
+</html>

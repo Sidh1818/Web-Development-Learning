@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Page using CSS</title>
+
+<style>
+
+/* Page Background */
+body{
+    background-image:url("RCB.avif");
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-family:Arial;
+}
+
+/* Different Font Styles */
+h1{
+    font-family:Georgia;
+    text-align:center;
+}
+
+p{
+    font-family:Courier New;
+    font-size:18px;
+    color:darkblue;
+}
+
+/* Background image for element */
+.box{
+    width:300px;
+    height:150px;
+    border:2px solid black;
+    background-image:url("https://picsum.photos/300/150");
+    background-repeat:repeat-x;
+    margin:20px;
+    padding:10px;
+}
+
+/* Link Styles */
+a:link{
+    color:blue;
+}
+
+a:visited{
+    color:purple;
+}
+
+a:hover{
+    color:red;
+    text-decoration:underline;
+}
+
+a:active{
+    color:green;
+}
+
+/* Custom Cursor */
+a{
+    cursor:pointer;
+}
+
+/* Layers */
+.layer1{
+    position:absolute;
+    left:200px;
+    top:300px;
+    font-size:40px;
+    color:red;
+    z-index:1;
+}
+
+.layer2{
+    position:absolute;
+    left:220px;
+    top:320px;
+    font-size:40px;
+    color:blue;
+    z-index:2;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Web Page using CSS</h1>
+
+<p>This page demonstrates different CSS features.</p>
+
+<div class="box">
+Background image with repeat-x
+</div>
+
+<br>
+
+<a href="#">Register</a>
+
+<div class="layer1">LAYER 1</div>
+<div class="layer2">LAYER 2</div>
+
+</body>
+</html>
