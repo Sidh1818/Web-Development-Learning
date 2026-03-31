@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Feet and Inches Converter</title>
+    <title>Feet and Inches Converter</title>
 
-<script>
+    <script>
+        function feetToInches() {
+            let feet = document.getElementById("feet").value;
 
-function feetToInches() {
-    var feet = document.getElementById("feet").value;
-    document.getElementById("inches").value = feet * 12;
-}
+            if (feet === "") {
+                document.getElementById("inches").value = "";
+                return;
+            }
 
-function inchesToFeet() {
-    var inches = document.getElementById("inches").value;
-    document.getElementById("feet").value = inches / 12;
-}
+            document.getElementById("inches").value = (parseFloat(feet) * 12).toFixed(2);
+        }
 
-</script>
+        function inchesToFeet() {
+            let inches = document.getElementById("inches").value;
 
+            if (inches === "") {
+                document.getElementById("feet").value = "";
+                return;
+            }
+
+            document.getElementById("feet").value = (parseFloat(inches) / 12).toFixed(2);
+        }
+    </script>
 </head>
 
 <body>
 
-<h2>Height Converter</h2>
+    <h2>Height Converter</h2>
 
-Feet:
-<input type="number" id="feet" onkeyup="feetToInches()">
+    <label for="feet">Feet:</label>
+    <input type="number" id="feet" oninput="feetToInches()" step="any">
 
-&nbsp;&nbsp;
+    <br><br>
 
-Inches:
-<input type="number" id="inches" onkeyup="inchesToFeet()">
+    <label for="inches">Inches:</label>
+    <input type="number" id="inches" oninput="inchesToFeet()" step="any">
 
 </body>
 </html>
