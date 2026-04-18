@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Telephone Number Parser</title>
+        <script>
+            function parsePhone() {
+                var phone = document.getElementById("phone").value;
+
+                var parts = phone.split(")");
+                var areaCode = parts[0].split("(")[1];
+                var number = parts[1].split("-");
+                var sevenDigit = number[0] + "-" + number[1];
+
+                document.getElementById("area").value = areaCode;
+                document.getElementById("num").value = sevenDigit;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Telephone Number Parser</h2>
+
+        Enter Phone Number (555)555-5555:
+        <input type="text" id="phone" placeholder="(555)555-5555">
+        <br><br>
+
+        <button onclick="parsePhone()">Extract</button>
+        <br><br>
+
+        Area Code:
+        <input type="text" id="area" readonly>
+        <br><br>
+
+        Phone Number:
+        <input type="text" id="num" readonly>
+    </body>
+</html>

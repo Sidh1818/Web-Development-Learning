@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String and Number Functions</title>
+        <script>
+            function findVowel() {
+                var str = document.getElementById("str").value;
+                var vowels = "aeiouAEIOU";
+
+                for (var i = 0; i < str.length; i++) {
+                    if (vowels.indexOf(str[i]) != -1) {
+                        document.getElementById("vowelResult").innerHTML =
+                        "First vowel '" + str[i] + "' found at position " + i;
+                        return;
+                    }
+                }
+                document.getElementById("vowelResult").innerHTML = "No vowel found.";
+            }
+
+            function reverseNumber() {
+                var num = document.getElementById("num").value;
+                var reversed = num.split("").reverse().join("");
+                document.getElementById("reverseResult").innerHTML = "Reversed: " + parseInt(reversed);
+            }
+        </script>
+    </head>
+    <body>
+        <h2>String and Number Functions</h2>
+
+        <h3>a. Find Left-Most Vowel Position</h3>
+        Enter a String:
+        <input type="text" id="str">
+        <br><br>
+        <button onclick="findVowel()">Find Vowel</button>
+        <p id="vowelResult"></p>
+
+        <h3>b. Reverse a Number</h3>
+        Enter a Number:
+        <input type="number" id="num">
+        <br><br>
+        <button onclick="reverseNumber()">Reverse</button>
+        <p id="reverseResult"></p>
+    </body>
+</html>

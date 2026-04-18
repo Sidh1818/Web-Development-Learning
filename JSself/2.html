@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Calculator</title>
+    <head>
+        <title>Calculator</title>
+        <script>
+            function calculate() {
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+            var op = document.getElementById("operation").value;
+            var result;
 
-<script>
+            if(op == "+")
+            result = n1 + n2;
 
-function calculate() {
+            else if(op == "-")
+            result = n1 - n2;
 
-var n1 = parseFloat(document.getElementById("num1").value);
-var n2 = parseFloat(document.getElementById("num2").value);
-var op = document.getElementById("operation").value;
+            else if(op == "*")
+            result = n1 * n2;
 
-var result;
+            else if(op == "/")
+            result = n1 / n2;
 
-if(op == "+")
-result = n1 + n2;
+            document.getElementById("result").innerHTML = "Result = " + result;
+        }
+        </script>
+    </head>
+    <body>
+        <h2>Simple Calculator</h2>
 
-else if(op == "-")
-result = n1 - n2;
+        Number 1:
+        <input type="number" id="num1"><br><br>
 
-else if(op == "*")
-result = n1 * n2;
+        Number 2:
+        <input type="number" id="num2"><br><br>
 
-else if(op == "/")
-result = n1 / n2;
+        Operation:
+        <select id="operation">
+        <option value="+">Add</option>
+        <option value="-">Subtract</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+        </select>
 
-document.getElementById("result").innerHTML = "Result = " + result;
-
-}
-
-</script>
-
-</head>
-
-<body>
-
-<h2>Simple Calculator</h2>
-
-Number 1:
-<input type="number" id="num1"><br><br>
-
-Number 2:
-<input type="number" id="num2"><br><br>
-
-Operation:
-<select id="operation">
-<option value="+">Add</option>
-<option value="-">Subtract</option>
-<option value="*">Multiply</option>
-<option value="/">Divide</option>
-</select>
-
-<br><br>
-
-<button onclick="calculate()">Calculate</button>
-
-<h3 id="result"></h3>
-
-</body>
+        <br><br>
+        
+        <button onclick="calculate()">Calculate</button>
+        <h3 id="result"></h3>
+    </body>
 </html>

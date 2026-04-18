@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feet and Inches Converter</title>\
+<script>
+function feetToInches() {
+    var feet = document.getElementById("feet").value;
+    document.getElementById("inches").value = feet * 12;
+}
+
+function inchesToFeet() {
+    var inches = document.getElementById("inches").value;
+    document.getElementById("feet").value = inches / 12;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Height Converter</h2>
+
+Feet:
+<input type="number" id="feet" onkeyup="feetToInches()">
+
+&nbsp;&nbsp;
+
+Inches:
+<input type="number" id="inches" onkeyup="inchesToFeet()">
+
+</body>
+</html>
+

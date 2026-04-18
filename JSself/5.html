@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Feet and Inches Converter</title>
+    <head>
+        <title>Self Modifying Page</title>
+        <script>
+            var messages = [
+                "Welcome to the Page!",
+                "This page changes every minute.",
+                "JavaScript is fun!",
+                "Keep Learning!",
+                "You are awesome!"
+            ];
 
-<script>
+            var colors = ["lightblue", "lightgreen", "lightyellow", "lightpink", "lightsalmon"];
 
-function feetToInches() {
-    var feet = document.getElementById("feet").value;
-    document.getElementById("inches").value = feet * 12;
-}
+            var index = 0;
 
-function inchesToFeet() {
-    var inches = document.getElementById("inches").value;
-    document.getElementById("feet").value = inches / 12;
-}
+            function modifyPage() {
+                document.getElementById("msg").innerHTML = messages[index];
+                document.body.style.backgroundColor = colors[index];
+                document.getElementById("count").innerHTML = "Change #" + (index + 1);
+                index = (index + 1) % messages.length;
+            }
 
-</script>
-
-</head>
-
-<body>
-
-<h2>Height Converter</h2>
-
-Feet:
-<input type="number" id="feet" onkeyup="feetToInches()">
-
-&nbsp;&nbsp;
-
-Inches:
-<input type="number" id="inches" onkeyup="inchesToFeet()">
-
-</body>
+            setInterval(modifyPage, 60000);
+        </script>
+    </head>
+    <body>
+        <h2>Self Modifying Page</h2>
+        <p id="msg">Page will change every minute...</p>
+        <p id="count"></p>
+    </body>
 </html>

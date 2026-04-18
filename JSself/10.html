@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Case Toggle</title>
+        <script>
+            function toggleCase() {
+                var str = document.getElementById("input").value;
+                var result = "";
+
+                for (var i = 0; i < str.length; i++) {
+                    if (str[i] == str[i].toUpperCase()) {
+                        result += str[i].toLowerCase();
+                    } else {
+                        result += str[i].toUpperCase();
+                    }
+                }
+
+                document.getElementById("output").value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Case Toggle</h2>
+
+        Enter String:
+        <input type="text" id="input" placeholder="e.g. Hello World">
+        <br><br>
+
+        <button onclick="toggleCase()">Toggle Case</button>
+        <br><br>
+
+        Output:
+        <input type="text" id="output" readonly>
+    </body>
+</html>

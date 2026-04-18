@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maruti Car Survey</title>
+        <script>
+            // survey data [city][model]
+            var data = {
+                "Delhi":   { "Maruti-K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "Maruti-SX4": 0 },
+                "Mumbai":  { "Maruti-K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "Maruti-SX4": 0 },
+                "Chennai": { "Maruti-K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "Maruti-SX4": 0 },
+                "Kolkata": { "Maruti-K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "Maruti-SX4": 0 }
+            };
+
+            var models = ["Maruti-K10", "Zen-Astelo", "Wagnor", "Maruti-SX4"];
+            var cities = ["Delhi", "Mumbai", "Chennai", "Kolkata"];
+
+            function addEntry() {
+                var city  = document.getElementById("city").value;
+                var model = document.getElementById("model").value;
+
+                data[city][model]++;
+                updateTable();
+            }
+
+            function updateTable() {
+                for (var i = 0; i < cities.length; i++) {
+                    var cityTotal = 0;
+                    for (var j = 0; j < models.length; j++) {
+                        var val = data[cities[i]][models[j]];
+                        document.getElementById(cities[i] + "_" + models[j]).innerHTML = val;
+                        cityTotal += val;
+                    }
+                    document.getElementById(cities[i] + "_total").innerHTML = cityTotal;
+                }
+
+                // model totals
+                for (var j = 0; j < models.length; j++) {
+                    var modelTotal = 0;
+                    for (var i = 0; i < cities.length; i++) {
+                        modelTotal += data[cities[i]][models[j]];
+                    }
+                    document.getElementById("total_" + models[j]).innerHTML = modelTotal;
+                }
+
+                // grand total
+                var grand = 0;
+                for (var i = 0; i < cities.length; i++)
+                    for (var j = 0; j < models.length; j++)
+                        grand += data[cities[i]][models[j]];
+                document.getElementById("grand_total").innerHTML = grand;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Maruti Car Survey</h2>
+
+        Select City:
+        <select id="city">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Kolkata">Kolkata</option>
+        </select>
+        &nbsp;&nbsp;
+
+        Select Model:
+        <select id="model">
+            <option value="Maruti-K10">Maruti-K10</option>
+            <option value="Zen-Astelo">Zen-Astelo</option>
+            <option value="Wagnor">Wagnor</option>
+            <option value="Maruti-SX4">Maruti-SX4</option>
+        </select>
+        &nbsp;&nbsp;
+
+        <button onclick="addEntry()">Add Entry</button>
+
+        <br><br>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+                <th>City / Model</th>
+                <th>Maruti-K10</th>
+                <th>Zen-Astelo</th>
+                <th>Wagnor</th>
+                <th>Maruti-SX4</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td><b>Delhi</b></td>
+                <td id="Delhi_Maruti-K10">0</td>
+                <td id="Delhi_Zen-Astelo">0</td>
+                <td id="Delhi_Wagnor">0</td>
+                <td id="Delhi_Maruti-SX4">0</td>
+                <td id="Delhi_total">0</td>
+            </tr>
+            <tr>
+                <td><b>Mumbai</b></td>
+                <td id="Mumbai_Maruti-K10">0</td>
+                <td id="Mumbai_Zen-Astelo">0</td>
+                <td id="Mumbai_Wagnor">0</td>
+                <td id="Mumbai_Maruti-SX4">0</td>
+                <td id="Mumbai_total">0</td>
+            </tr>
+            <tr>
+                <td><b>Chennai</b></td>
+                <td id="Chennai_Maruti-K10">0</td>
+                <td id="Chennai_Zen-Astelo">0</td>
+                <td id="Chennai_Wagnor">0</td>
+                <td id="Chennai_Maruti-SX4">0</td>
+                <td id="Chennai_total">0</td>
+            </tr>
+            <tr>
+                <td><b>Kolkata</b></td>
+                <td id="Kolkata_Maruti-K10">0</td>
+                <td id="Kolkata_Zen-Astelo">0</td>
+                <td id="Kolkata_Wagnor">0</td>
+                <td id="Kolkata_Maruti-SX4">0</td>
+                <td id="Kolkata_total">0</td>
+            </tr>
+            <tr>
+                <td><b>Total</b></td>
+                <td id="total_Maruti-K10">0</td>
+                <td id="total_Zen-Astelo">0</td>
+                <td id="total_Wagnor">0</td>
+                <td id="total_Maruti-SX4">0</td>
+                <td id="grand_total">0</td>
+            </tr>
+        </table>
+    </body>
+</html>

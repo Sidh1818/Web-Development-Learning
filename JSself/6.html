@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Running Clock</title>
+        <script>
+            function showClock() {
+                var now = new Date();
+                var h = now.getHours();
+                var m = now.getMinutes();
+                var s = now.getSeconds();
+                var ampm = h >= 12 ? "PM" : "AM";
+
+                h = h % 12;
+                h = h ? h : 12;
+
+                m = m < 10 ? "0" + m : m;
+                s = s < 10 ? "0" + s : s;
+
+                document.getElementById("clock").innerHTML = h + ":" + m + ":" + s + " " + ampm;
+
+                setInterval(showClock, 1000);
+            }
+        </script>
+    </head>
+    <body onload="showClock()">
+        <h2>Running Clock</h2>
+        <h1 id="clock"></h1>
+    </body>
+</html>

@@ -1,64 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Country and Capital Quiz</title>
+    <head>
+        <title>Country and Capital Quiz</title>
+        <script>
+            function checkAnswer() {
+                var country = document.getElementById("country").value;
+                var capital = document.getElementById("capital").value;
 
-<script>
-function checkAnswer() {
+                // Country and capital pairs
+                var data = {
+                    "India": "New Delhi",
+                    "USA": "Washington DC",
+                    "France": "Paris",
+                    "Japan": "Tokyo",                        
+                    "Australia": "Canberra"
+                };
 
-    var country = document.getElementById("country").value;
-    var capital = document.getElementById("capital").value;
+                if (data[country] === capital) {
+                    document.getElementById("result").innerHTML = "Correct Answer";
+                } 
+                else {
+                    document.getElementById("result").innerHTML =
+                    "Wrong Answer! Correct capital of " + country + " is " + data[country];
+                }
+            }
+        </script>
 
-    // Country and capital pairs
-    var data = {
-        "India": "New Delhi",
-        "USA": "Washington DC",
-        "France": "Paris",
-        "Japan": "Tokyo",
-        "Australia": "Canberra"
-    };
-
-    if (data[country] === capital) {
-        document.getElementById("result").innerHTML = "Correct Answer";
-    } 
-    else {
-        document.getElementById("result").innerHTML =
-        "Wrong Answer! Correct capital of " + country + " is " + data[country];
-    }
-}
-</script>
-
-</head>
-
-<body>
-
-<h2>Country and Capital Matching</h2>
-
-<label>Select Country:</label>
-<select id="country">
-    <option value="India">India</option>
-    <option value="USA">USA</option>
-    <option value="France">France</option>
-    <option value="Japan">Japan</option>
-    <option value="Australia">Australia</option>
-</select>
-
-<br><br>
-
-<label>Select Capital:</label>
-<select id="capital">
-    <option value="New Delhi">New Delhi</option>
-    <option value="Washington DC">Washington DC</option>
-    <option value="Paris">Paris</option>
-    <option value="Tokyo">Tokyo</option>
-    <option value="Canberra">Canberra</option>
-</select>
-
-<br><br>
-
-<button onclick="checkAnswer()">Check Answer</button>
-
-<p id="result"></p>
-
-</body>
+    </head>
+    <body>
+        <h2>Country and Capital Matching</h2>
+        <label>Select Country:</label>
+        <select id="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="France">France</option>
+            <option value="Japan">Japan</option>
+            <option value="Australia">Australia</option>
+        </select>
+        <br><br>
+        <label>Select Capital:</label>
+        <select id="capital">
+            <option value="New Delhi">New Delhi</option>
+            <option value="Washington DC">Washington DC</option>
+            <option value="Paris">Paris</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Canberra">Canberra</option>
+        </select>
+        <br><br>
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+    </body>
 </html>

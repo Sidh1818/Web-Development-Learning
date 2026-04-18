@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday Day Finder</title>
+        <script>
+            function findDay() {
+                var dob = document.getElementById("dob").value;
+
+                if (dob == "") {
+                    alert("Please enter a date.");
+                    return;
+                }
+
+                var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+                var date = new Date(dob);
+                var day = days[date.getDay()];
+
+                alert("You were born on a " + day + "!");
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Birthday Day Finder</h2>
+        Enter your Birthdate:
+        <input type="text" id="dob" placeholder="YYYY-MM-DD">
+        <br><br>
+        <button onclick="findDay()">Find Day</button>
+    </body>
+</html>
