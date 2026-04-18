@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Self Modifying Page</title>
-        <script>
-            var messages = [
-                "Welcome to the Page!",
-                "This page changes every minute.",
-                "JavaScript is fun!",
-                "Keep Learning!",
-                "You are awesome!"
-            ];
+<head>
+    <title>Feet and Inches Converter</title>
 
-            var colors = ["lightblue", "lightgreen", "lightyellow", "lightpink", "lightsalmon"];
+    <script>
+        function feetToInches() {
+            let feet = document.getElementById("feet").value;
 
-            var index = 0;
-
-            function modifyPage() {
-                document.getElementById("msg").innerHTML = messages[index];
-                document.body.style.backgroundColor = colors[index];
-                document.getElementById("count").innerHTML = "Change #" + (index + 1);
-                index = (index + 1) % messages.length;
+            if (feet === "") {
+                document.getElementById("inches").value = "";
+                return;
             }
 
-            setInterval(modifyPage, 60000);
-        </script>
-    </head>
-    <body>
-        <h2>Self Modifying Page</h2>
-        <p id="msg">Page will change every minute...</p>
-        <p id="count"></p>
-    </body>
+            document.getElementById("inches").value = (parseFloat(feet) * 12).toFixed(2);
+        }
+
+        function inchesToFeet() {
+            let inches = document.getElementById("inches").value;
+
+            if (inches === "") {
+                document.getElementById("feet").value = "";
+                return;
+            }
+
+            document.getElementById("feet").value = (parseFloat(inches) / 12).toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Height Converter</h2>
+
+    <label for="feet">Feet:</label>
+    <input type="number" id="feet" oninput="feetToInches()" step="any">
+
+    <br><br>
+
+    <label for="inches">Inches:</label>
+    <input type="number" id="inches" oninput="inchesToFeet()" step="any">
+
+</body>
 </html>
