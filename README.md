@@ -1,201 +1,184 @@
 # Web Development Learning Project
 
-A comprehensive collection of HTML, CSS, and JavaScript examples demonstrating fundamental web development concepts.
+A comprehensive collection of HTML, CSS, and JavaScript programs developed as part of the FSWD (Full Stack Web Development) Lab. This project covers fundamental to intermediate web development concepts through hands-on practice.
 
 ---
 
-## 📁 Project Structure
+## 🌐 HTML — HyperText Markup Language
 
-```
-Web Development/
-├── HTML/
-│   ├── docs/                  # Image assets
-│   ├── First.html             # Basic HTML structure and styling
-│   ├── TextFormatting.html    # Text formatting tags demonstration
-│   ├── ques2.html             # Star patterns and image maps
-│   ├── Ques3.html             # Complex table with course data
-│   ├── Ques4.html             # Image hyperlinks table
-│   ├── ques6.html             # Basic HTML form
-│   ├── Ques7.html             # Hotel customer profile form (styled)
-│   ├── ques7-2.html           # Hotel customer profile form (simple)
-│   ├── Ques8.html             # HTML5 tags demo - Digital Media Studio
-│   ├── ques8-2.html           # HTML5 tags demo (simple)
-│   └── ques9.html             # Nested lists demonstration
-├── CSS/
-│   ├── first.css              # External CSS stylesheet
-│   ├── firstC.html            # First CSS page with external stylesheet
-│   ├── pos.html               # CSS positioning demo
-│   ├── ques1.html             # Hyperlink styling (a:link, visited, active)
-│   ├── ques2.html             # Box shadow and text shadow
-│   ├── ques3.html             # Rounded corners (border-radius)
-│   ├── ques4.html             # Newspaper column layout
-│   ├── ques5.html             # CSS transitions
-│   ├── ques6.html             # Fixed background image
-│   ├── ques7.html             # Background repeat and position
-│   ├── ques8.html             # CSS positioning (static, relative, absolute, fixed, sticky)
-│   ├── ques9.html             # Full web page with CSS (fonts, links, layers, background)
-│   └── RCB.avif               # Image asset
-├── JS/
-│   ├── display.js             # External JavaScript file
-│   ├── first1.html            # Inline JS - DOM manipulation
-│   ├── first2.html            # JS function - DOM manipulation
-│   ├── form.html              # Student registration form with validation
-│   └── sec.html               # Feet to Inches converter
-└── FSWD Lab Manual.pdf
-```
+HTML is the standard markup language used to create the structure of web pages. It uses tags to define elements like headings, paragraphs, links, images, tables, and forms.
 
----
+### Advantages of HTML
+- Simple and easy to learn
+- Supported by all browsers
+- Free to use, no special software needed
+- Works as the backbone of every web page
+- Integrates easily with CSS and JavaScript
 
-## 🌐 HTML
+### Topics Covered
 
-### First.html
-- Basic HTML page structure
-- Animated marquee heading
-- Inline CSS styling (font-size, color, background-color)
-- Notes on CSS display properties and text formatting tags
+**Text Formatting**
+All major formatting tags were demonstrated — `<b>`, `<strong>`, `<em>`, `<i>`, `<u>`, `<mark>`, `<del>`, `<ins>`, `<sub>`, `<sup>`, `<blockquote>`, `<pre>`. These tags help present text in a meaningful and readable way.
 
-### TextFormatting.html
-- Demonstrates all major text formatting tags:
-  `<b>`, `<strong>`, `<em>`, `<i>`, `<u>`, `<mark>`, `<del>`, `<ins>`, `<sub>`, `<sup>`
-- Blockquote usage
-- Preformatted text with marquee animation
+**Tables**
+Complex tables were built using `rowspan` and `colspan` to merge cells across rows and columns. Used to display course-wise subject data (MBA, MCM) with internal/external marks and categories.
 
-### ques2.html
-- ASCII art star patterns using `<pre>` tag
-- Interactive image map of India
-- Clickable regions (Rajasthan, Uttar Pradesh, Madhya Pradesh) linking to Wikipedia
+**Image Maps**
+An interactive map of India was created using `<map>` and `<area>` tags with coordinate-based clickable regions for Rajasthan, Uttar Pradesh, and Madhya Pradesh — each linking to Wikipedia.
 
-### Ques3.html
-- Complex table with `rowspan` and `colspan`
-- Course-wise subject list (MBA, MCM)
-- Internal/External marks and category columns
-- HTML entities (✔ checkmarks)
+**Image Hyperlinks**
+A 3×4 grid of brand logos (Puma, Reebok, MRF, Sparx, Pogo, Nickelodeon, Airtel, Tata-Indicom, Vodafone, Uninor) was created as clickable image links using `<a>` and `<img>` tags.
 
-### Ques4.html
-- 3×4 grid of brand logos as image hyperlinks
-- All images correctly referenced from `docs/` folder
-- Brands: Puma, Reebok, MRF, Sparx, Pogo, Nickelodeon, Airtel, Tata-Indicom, Vodafone, Uninor
+**Forms**
+Two types of forms were built:
+- A basic form with fieldsets covering name, birthdate, gender, address, phone, interests, and favorite color
+- A hotel customer profile form with name, address, age, gender (radio), room type (dropdown: A/C, Non-A/C, Deluxe), and payment method (Cash, Card, Coupons) with check-in/check-out date pickers and JavaScript validation
 
-### ques6.html
-- Basic HTML form with fieldsets
-- Fields: Full name, Birth date, Gender, Address, Phone, Interests, Favorite color
-- Submit and Reset buttons
+**HTML5 Semantic & Multimedia Tags**
+The following HTML5 tags were demonstrated in a "Digital Media Studio" themed page:
+- `<header>`, `<footer>`, `<nav>`, `<article>` — semantic structure tags
+- `<video>`, `<audio>` — multimedia with multiple format support and fallback
+- `<embed>` — embedding external content
+- `<datalist>` — autocomplete suggestions for input fields
+- `<output>` — displaying dynamic calculation results
+- `<bdi>` — bidirectional text isolation for multilingual content
 
-### Ques7.html ⭐
-- Hotel customer profile data entry form (styled version)
-- Fields: Name, Address, Age, Gender (radio), Room Type (dropdown: A/C, Non-A/C, Deluxe), Payment Method (radio: Cash, Card, Coupons)
-- Check-in / Check-out date pickers
-- Form validation with required fields
-- JavaScript form submission with alert summary
-- Gradient background and professional styling
-
-### ques7-2.html
-- Hotel customer profile form (simple version)
-- Same fields as Ques7.html using basic HTML only
-
-### Ques8.html ⭐
-- HTML5 tags demonstration — "Digital Media Studio" theme
-- Tags covered: `<video>`, `<audio>`, `<header>`, `<footer>`, `<nav>`, `<embed>`, `<datalist>`, `<bdi>`, `<article>`, `<output>`
-- Interactive project cost calculator using `<output>`
-- Multilingual user reviews using `<bdi>`
-- Gradient styling and responsive design
-
-### ques8-2.html
-- HTML5 tags demonstration (simple version)
-- Same tags as Ques8.html using basic HTML only
-
-### ques9.html
-- Nested ordered and unordered lists
-- Programming Languages hierarchy (Python, Java with frameworks and libraries)
-- Web Development structure (Frontend: HTML, CSS, JS frameworks; Backend: Node.js, PHP, Rails)
+**Nested Lists**
+Demonstrated multi-level ordered and unordered lists covering Programming Languages (Python, Java with frameworks/libraries) and Web Development (Frontend/Backend technologies).
 
 ---
 
-## 🎨 CSS
+## 🎨 CSS — Cascading Style Sheets
 
-### firstC.html + first.css
-- First page using external CSS stylesheet
-- Box and container styling
-- Linked to `first.css`
+CSS is used to control the visual presentation of HTML elements — including layout, colors, fonts, spacing, and animations. It separates content from design, making web pages easier to maintain.
 
-### ques1.html
-- Hyperlink pseudo-class styling
-- `a:link`, `a:visited`, `a:active` color customization
+### Advantages of CSS
+- Saves time — one stylesheet can control multiple pages
+- Pages load faster as CSS reduces HTML code
+- Easy to maintain and update styles globally
+- Provides better control over layout and design
+- Supports responsive design for different screen sizes
 
-### ques2.html
-- `box-shadow` and `text-shadow` properties
+### Topics Covered
 
-### ques3.html
-- `border-radius` for rounded corners
+**External Stylesheet**
+A separate `.css` file was linked to an HTML page using `<link>`, demonstrating the best practice of separating style from structure.
 
-### ques4.html
-- Multi-column newspaper layout using `column-count` and `column-gap`
+**Hyperlink Pseudo-classes**
+Styled anchor tags using `a:link`, `a:visited`, `a:hover`, and `a:active` to control link appearance at different states.
 
-### ques5.html
-- CSS `transition` effect on hover (width expansion)
+**Box Shadow & Text Shadow**
+Used `box-shadow` to add depth to elements and `text-shadow` to add visual effects to text.
 
-### ques6.html
-- `background-attachment: fixed` for parallax-style fixed background
+**Border Radius**
+Used `border-radius` to create rounded corners on boxes and containers.
 
-### ques7.html
-- `background-repeat: repeat-x` and `background-position`
+**Multi-column Layout**
+Created a newspaper-style layout using `column-count` and `column-gap` to split content into multiple columns.
 
-### ques8.html
-- All 5 CSS position types: `static`, `relative`, `absolute`, `fixed`, `sticky`
+**CSS Transitions**
+Implemented smooth hover effects using the `transition` property — a box expands in width on hover over 2 seconds.
 
-### ques9.html
-- Full web page combining multiple CSS features:
-  - Background image with `no-repeat` and `cover`
-  - Multiple font families
-  - Link styles (`a:link`, `a:visited`, `a:hover`, `a:active`)
-  - Custom cursor
-  - Element background image with `repeat-x`
-  - CSS layers using `z-index`
+**Background Properties**
+- `background-attachment: fixed` — creates a parallax-style fixed background
+- `background-repeat: repeat-x` — repeats background image horizontally
+- `background-position` — controls where the background image starts
+- `background-size: cover` — scales image to cover the full page
 
-### pos.html
-- Additional CSS positioning practice
+**CSS Positioning**
+All 5 position types were demonstrated:
+- `static` — default flow
+- `relative` — offset from its normal position
+- `absolute` — positioned relative to nearest positioned ancestor
+- `fixed` — stays fixed on screen while scrolling
+- `sticky` — sticks to top when scrolling past it
+
+**CSS Layers (z-index)**
+Used `z-index` with `position: absolute` to stack elements on top of each other in layers.
 
 ---
 
 ## ⚡ JavaScript
 
-### first1.html
-- Inline JavaScript using `onclick`
-- DOM manipulation with `getElementById` and `innerHTML`
+JavaScript is a scripting language that makes web pages interactive and dynamic. It runs directly in the browser and can manipulate HTML and CSS in real time.
 
-### first2.html
-- JavaScript function in `<script>` tag
-- Button click triggers DOM text update
+### Advantages of JavaScript
+- Runs on the client side — no server needed for basic logic
+- Makes pages interactive and dynamic
+- Supported by all modern browsers
+- Can validate forms before data is sent to server
+- Works with HTML and CSS seamlessly
 
-### sec.html
-- Feet ↔ Inches real-time converter
-- Two parallel input boxes that update each other on input
+### Topics Covered
 
-### form.html
-- Student Registration Form with HTML5 validation
-- Fields: Student ID (8 digits), Full Name (letters only), Email, Mobile (10 digits)
-- `pattern` and `required` attributes for validation
-- Linked to external `display.js`
+**DOM Manipulation**
+Used `document.getElementById()` and `innerHTML` to dynamically update page content on button click — both inline and via functions.
+
+**Form Validation**
+Built a Student Registration Form with `pattern` and `required` attributes for:
+- Student ID — exactly 8 digits
+- Full Name — letters only, minimum 3 characters
+- Email — valid email format
+- Mobile — exactly 10 digits
+
+**Feet ↔ Inches Converter**
+A real-time converter with two parallel input boxes — entering a value in one automatically updates the other using `oninput` events.
+
+**Country & Capital Quiz**
+A quiz that matches user-selected country with capital using a JavaScript object as a key-value data store.
+
+**Simple Calculator**
+Performs addition, subtraction, multiplication, and division based on user-selected operation.
+
+**Credit Card Validator**
+Validates card type (Visa, MasterCard, American Express) based on starting digits and card length.
+
+**Form Validation with Regex**
+Validates name, email, and password using regular expressions (`/pattern/`) before form submission.
+
+**Self-Modifying Page**
+A page that automatically changes its message and background color every minute using `setInterval()`.
+
+**Running Clock**
+A live digital clock that updates every second using `setInterval()`, `new Date()`, and `getHours()`, `getMinutes()`, `getSeconds()`.
+
+**Birthday Day Finder**
+Accepts a birthdate as input and displays the day of the week using `new Date()` and `getDay()` with an alert box.
+
+**Telephone Number Parser**
+Parses a phone number in `(555)555-5555` format using the `split()` method to extract the area code and 7-digit number into separate fields.
+
+**String & Number Functions**
+- Finds the position of the left-most vowel in a string by looping and checking against `"aeiouAEIOU"`
+- Reverses a number's digits using `split("").reverse().join("")`
+
+**Case Toggle**
+Converts uppercase letters to lowercase and lowercase to uppercase by comparing each character using `toUpperCase()`.
+
+**Maruti Car Survey**
+A survey tool that tracks the count of 4 Maruti car models (Maruti-K10, Zen-Astelo, Wagnor, Maruti-SX4) across 4 metro cities (Delhi, Mumbai, Chennai, Kolkata). Displays a live tabulated report with row-wise, column-wise, and grand totals.
 
 ---
 
-## 📚 Key Concepts Covered
+## 📚 Key Concepts Summary
 
-| Topic | Concepts |
-|-------|----------|
+| Topic | Key Concepts |
+|-------|-------------|
 | HTML Structure | DOCTYPE, head, body, semantic tags |
 | Text Formatting | b, strong, em, i, u, mark, del, ins, sub, sup |
 | Tables | rowspan, colspan, th, td, cellpadding |
-| Forms | input types, radio, select, textarea, validation |
-| Images | img, alt, width/height, relative paths |
-| Hyperlinks | anchor tag, target="_blank", image links |
-| Image Maps | area, coords, shape, usemap |
+| Forms | input types, radio, select, textarea, fieldset |
+| Images & Maps | img, alt, usemap, area, coords, shape |
 | HTML5 Tags | video, audio, header, footer, nav, article, embed, datalist, bdi, output |
-| CSS Basics | selectors, colors, fonts, backgrounds |
+| CSS Selectors | class, id, element, pseudo-class selectors |
 | CSS Box Model | border, padding, margin, border-radius |
 | CSS Effects | box-shadow, text-shadow, transitions |
-| CSS Layout | columns, positioning, z-index |
-| JavaScript | DOM manipulation, functions, events, form validation |
+| CSS Layout | columns, positioning, z-index, background |
+| JS Basics | variables, loops, functions, conditionals |
+| JS DOM | getElementById, innerHTML, onclick, oninput |
+| JS Date & Time | new Date(), getDay(), getHours(), setInterval() |
+| JS Strings | split(), reverse(), join(), indexOf(), toUpperCase() |
+| JS Validation | pattern matching, regex, required fields |
 
 ---
 
@@ -204,7 +187,7 @@ Web Development/
 1. Clone or download the project
 2. Open any `.html` file in a browser
 3. For CSS files, ensure the linked `.css` file is in the same folder
-4. For JS files, ensure `display.js` is in the same folder
+4. For JS files, ensure `display.js` is in the JS folder
 
 ## 🌐 Browser Compatibility
 
@@ -223,4 +206,4 @@ Web Development/
 
 ---
 
-*This project is designed for educational purposes as part of FSWD lab work.*
+*This project is developed as part of FSWD Lab work covering HTML, CSS, and JavaScript fundamentals.*
