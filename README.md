@@ -1,6 +1,6 @@
 # Web Development Learning Project
 
-A comprehensive collection of HTML, CSS, and JavaScript programs developed as part of the FSWD (Full Stack Web Development) Lab. This project covers fundamental to intermediate web development concepts through hands-on practice.
+A comprehensive collection of HTML, CSS, JavaScript, PHP, and React programs developed as part of the FSWD (Full Stack Web Development) Lab. This project covers fundamental to intermediate web development concepts through hands-on practice.
 
 ---
 
@@ -160,6 +160,72 @@ A survey tool that tracks the count of 4 Maruti car models (Maruti-K10, Zen-Aste
 
 ---
 
+## 🐘 PHP — Hypertext Preprocessor
+
+PHP is a server-side scripting language used to create dynamic web pages. It runs on the server and generates HTML that is sent to the browser.
+
+### Advantages of PHP
+- Runs on the server — handles backend logic securely
+- Supports databases like MySQL
+- Easy to embed within HTML
+- Cross-platform — works on Windows, Linux, macOS
+- Large community and wide hosting support
+
+### Topics Covered
+
+**Session Management**
+A login/logout system was built using PHP sessions:
+- `session_start()` initializes the session
+- `$_SESSION` stores username and login time across pages
+- `session_destroy()` clears the session on logout
+- Session ID is displayed to demonstrate how PHP tracks users
+
+**Cookies**
+A cookie management page was built demonstrating:
+- `setcookie(name, value, expiry)` to write a cookie with custom expiry days
+- `$_COOKIE` superglobal to read and display all active cookies in a table
+- Deleting a cookie by setting its expiry time to the past
+
+> ⚠️ PHP files require a local server like XAMPP or WAMP to run. Place files in `htdocs/` and open via `http://localhost/PHP/filename.php`
+
+---
+
+## ⚛️ React
+
+React is a JavaScript library for building fast, interactive user interfaces using a component-based architecture. It uses JSX syntax and manages UI state efficiently.
+
+### Advantages of React
+- Component-based — reusable and modular UI pieces
+- Virtual DOM — fast and efficient rendering
+- One-way data flow — predictable state management
+- Large ecosystem with hooks, routing, and state libraries
+- Backed by Meta, widely used in industry
+
+### Topics Covered
+
+**Counter Component**
+Built using `useState` hook — increment, decrement, and reset buttons update the count in real time.
+
+**Greeting Component**
+Demonstrates passing `name` and `message` as props to a functional component and rendering them dynamically.
+
+**Clock Component**
+A live clock built using `useState` and `useEffect` — updates every second using `setInterval` inside `useEffect`, with cleanup on unmount.
+
+**User Form with Controlled Inputs**
+A form with name, email, and message fields using controlled components — `useState` manages form data and displays submitted values on screen.
+
+**React Router (Multi-page Navigation)**
+Implemented client-side routing using `react-router-dom`:
+- `BrowserRouter`, `Routes`, `Route` for defining routes
+- `Link` component in Navbar for navigation
+- Pages: Home, About, Contact, Parent-Child
+
+**Parent-Child Props**
+Demonstrated passing data from a Parent component to multiple Child components via props — an array of children objects is mapped and rendered.
+
+---
+
 ## 📚 Key Concepts Summary
 
 | Topic | Key Concepts |
@@ -179,15 +245,20 @@ A survey tool that tracks the count of 4 Maruti car models (Maruti-K10, Zen-Aste
 | JS Date & Time | new Date(), getDay(), getHours(), setInterval() |
 | JS Strings | split(), reverse(), join(), indexOf(), toUpperCase() |
 | JS Validation | pattern matching, regex, required fields |
+| PHP Sessions | session_start(), $_SESSION, session_destroy() |
+| PHP Cookies | setcookie(), $_COOKIE, cookie expiry |
+| React Hooks | useState, useEffect |
+| React Props | passing data parent to child |
+| React Router | BrowserRouter, Routes, Route, Link |
 
 ---
 
 ## 🚀 Getting Started
 
 1. Clone or download the project
-2. Open any `.html` file in a browser
-3. For CSS files, ensure the linked `.css` file is in the same folder
-4. For JS files, ensure `display.js` is in the JS folder
+2. **HTML/CSS/JS** — Open any `.html` file directly in a browser
+3. **PHP** — Requires XAMPP/WAMP. Place in `htdocs/` and run via `http://localhost/`
+4. **React** — Navigate to `React/project/`, run `npm install` then `npm run dev`
 
 ## 🌐 Browser Compatibility
 
@@ -202,8 +273,9 @@ A survey tool that tracks the count of 4 Maruti car models (Maruti-K10, Zen-Aste
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [W3Schools](https://www.w3schools.com/)
-- [HTML Living Standard](https://html.spec.whatwg.org/)
+- [PHP Manual](https://www.php.net/manual/en/)
+- [React Docs](https://react.dev/)
 
 ---
 
-*This project is developed as part of FSWD Lab work covering HTML, CSS, and JavaScript fundamentals.*
+*This project is developed as part of FSWD Lab work covering HTML, CSS, JavaScript, PHP, and React fundamentals.*
