@@ -1,53 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Country and Capital Quiz</title>
+        <title>Credit Card Validation</title>
         <script>
-            function checkAnswer() {
-                var country = document.getElementById("country").value;
-                var capital = document.getElementById("capital").value;
-
-                // Country and capital pairs
-                var data = {
-                    "India": "New Delhi",
-                    "USA": "Washington DC",
-                    "France": "Paris",
-                    "Japan": "Tokyo",                        
-                    "Australia": "Canberra"
-                };
-
-                if (data[country] === capital) {
-                    document.getElementById("result").innerHTML = "Correct Answer";
-                } 
+            function validateCard() {
+                var card = document.getElementById("card").value;
+                if ((card.startsWith("51") || card.startsWith("52") || 
+                    card.startsWith("53") || card.startsWith("54") || 
+                    card.startsWith("55")) && card.length == 16) {
+                    alert("Valid MasterCard");
+                }
+                else if (card.startsWith("4") && (card.length == 13 || card.length == 16)) {
+                    alert("Valid Visa Card");
+                }
+                else if ((card.startsWith("34") || card.startsWith("37")) && card.length == 15) {
+                    alert("Valid American Express");
+                }
                 else {
-                    document.getElementById("result").innerHTML =
-                    "Wrong Answer! Correct capital of " + country + " is " + data[country];
+                    alert("Invalid Credit Card");
                 }
             }
         </script>
-
     </head>
     <body>
-        <h2>Country and Capital Matching</h2>
-        <label>Select Country:</label>
-        <select id="country">
-            <option value="India">India</option>
-            <option value="USA">USA</option>
-            <option value="France">France</option>
-            <option value="Japan">Japan</option>
-            <option value="Australia">Australia</option>
-        </select>
+        <h2>Credit Card Validator</h2>
+        Enter Card Number:
+        <input type="text" id="card">
         <br><br>
-        <label>Select Capital:</label>
-        <select id="capital">
-            <option value="New Delhi">New Delhi</option>
-            <option value="Washington DC">Washington DC</option>
-            <option value="Paris">Paris</option>
-            <option value="Tokyo">Tokyo</option>
-            <option value="Canberra">Canberra</option>
-        </select>
-        <br><br>
-        <button onclick="checkAnswer()">Check Answer</button>
-        <p id="result"></p>
-    </body>
+        <button onclick="validateCard()">Validate</button>
+    </body>    
 </html>

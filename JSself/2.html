@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Calculator</title>
+        <title>Form Validation</title>
         <script>
-            function calculate() {
-            var n1 = parseFloat(document.getElementById("num1").value);
-            var n2 = parseFloat(document.getElementById("num2").value);
-            var op = document.getElementById("operation").value;
-            var result;
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
 
-            if(op == "+")
-            result = n1 + n2;
+                var namePattern = /^[A-Za-z ]+$/;
 
-            else if(op == "-")
-            result = n1 - n2;
+                var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-            else if(op == "*")
-            result = n1 * n2;
+                if (!namePattern.test(name)) {
+                    alert("Invalid Name");
+                    return false;
+                }
 
-            else if(op == "/")
-            result = n1 / n2;
+                if (!emailPattern.test(email)) {
+                    alert("Invalid Email");
+                    return false;
+                }
 
-            document.getElementById("result").innerHTML = "Result = " + result;
-        }
+                if (password.length < 6) {
+                    alert("Password must be at least 6 characters");
+                    return false;
+                }
+
+                alert("Form Submitted Successfully");
+            }
         </script>
+
     </head>
     <body>
-        <h2>Simple Calculator</h2>
-
-        Number 1:
-        <input type="number" id="num1"><br><br>
-
-        Number 2:
-        <input type="number" id="num2"><br><br>
-
-        Operation:
-        <select id="operation">
-        <option value="+">Add</option>
-        <option value="-">Subtract</option>
-        <option value="*">Multiply</option>
-        <option value="/">Divide</option>
-        </select>
-
-        <br><br>
-        
-        <button onclick="calculate()">Calculate</button>
-        <h3 id="result"></h3>
+        <h2>Registration Form</h2>
+        <form onsubmit="return validateForm()">
+            Name:
+            <input type="text" id="name"><br><br>
+            Email:
+            <input type="text" id="email"><br><br>
+            Password:
+            <input type="password" id="password"><br><br>
+            <input type="submit" value="Submit">
+        </form>
     </body>
 </html>

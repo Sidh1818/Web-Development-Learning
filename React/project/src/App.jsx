@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Parent from "./pages/Parent";
+import Counter1 from "./Counter";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/parent" element={<Parent />} />
+          <Route path="/counter" element={<Counter1 />} />
         </Routes>
       </div>
     </BrowserRouter>
