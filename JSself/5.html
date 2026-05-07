@@ -1,44 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Feet and Inches Converter</title>
-
-    <script>
-        function feetToInches() {
-            let feet = document.getElementById("feet").value;
-
-            if (feet === "") {
-                document.getElementById("inches").value = "";
-                return;
+    <head>
+        <title>Self Modifying Page</title>
+        <script>
+            function modify() {
+                document.body.style.backgroundColor = "lightblue";
+                document.getElementById("msg").innerHTML = "Page has been modified!";
             }
 
-            document.getElementById("inches").value = (parseFloat(feet) * 12).toFixed(2);
-        }
-
-        function inchesToFeet() {
-            let inches = document.getElementById("inches").value;
-
-            if (inches === "") {
-                document.getElementById("feet").value = "";
-                return;
-            }
-
-            document.getElementById("feet").value = (parseFloat(inches) / 12).toFixed(2);
-        }
-    </script>
-</head>
-
-<body>
-
-    <h2>Height Converter</h2>
-
-    <label for="feet">Feet:</label>
-    <input type="number" id="feet" oninput="feetToInches()" step="any">
-
-    <br><br>
-
-    <label for="inches">Inches:</label>
-    <input type="number" id="inches" oninput="inchesToFeet()" step="any">
-
-</body>
+            setInterval(modify, 60000);
+        </script>
+    </head>
+    <body>
+        <h2>Self Modifying Page</h2>
+        <p id="msg">Page will modify itself after 1 minute...</p>
+    </body>
 </html>
